@@ -110,7 +110,7 @@ def add_new_authorized_personel(request):
             #convertion into base64
             passAscii = password.encode("ascii")
             passBytes = base64.b64encode(passAscii)
-            user.password = passBytes
+            user.password = passBytes 
             user.emailaddress = email
             if can_approve == None or can_approve == "":
                 user.approver_flag = "0"

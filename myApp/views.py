@@ -484,8 +484,7 @@ def login(request):
          #convert into base64
          passAscii = password.encode("ascii")
          passBytes = base64.b64encode(passAscii)
-         print(userid.password)
-
+         print(userid.password) 
          if userid.password == passBytes:
             request.session[ReqParams.LOGIN_SESSION] = userid.usertype
             request.session[ReqParams.userid] = userid.userid
